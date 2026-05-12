@@ -4,13 +4,14 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-	let prices=document.querySelectorAll(".price")
+	let prices=document.querySelectorAll(".prices")
 	let sum=0
 	prices.forEach((price)=>{
 		sum+=Number(price.innerText)
 	})
 	let tr = document.createElement("tr");
 	let td= document.createElement("td");
+	td.id = "ans";
 	td.innerText=sum
 	tr.appendChild(td)
 	let table=document.querySelector("table")
